@@ -5,10 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <h1>Monster Smash!</h1>
 <!-- add script src tag -->
-<script src="script.js"></script>
+<div >
+  <form id="getInfo">
+ <input id="input" type="text">
+ <input  type="submit" onclick="displayStuff()" name="Player name" placeholder="Enter your name">
+</form>
+</div>
+
+<div id="player">
+<div id="player-points"></div>
+</div>
+
+<div id="monster">
+  <div id="monster-points"></div>
+  </div>
+
 </body>
 </html>
