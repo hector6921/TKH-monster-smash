@@ -9,22 +9,29 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div id="container">
   <h1>Monster Smash!</h1>
 <!-- add script src tag -->
-<div >
+<div>
   <form id="getInfo">
  <input id="input" type="text">
  <input  type="submit" onclick="displayStuff()" name="Player name" placeholder="Enter your name">
 </form>
 </div>
-
-<div id="player">
-<div id="player-points"></div>
+<div id="gamescreen">
+  
+<div class="subjects" id="player">
+<div id="player-points" class="points"></div>
+<div class="avatar-pic" id="pokemon-pic-1"></div>
 </div>
 
-<div id="monster">
-  <div id="monster-points"></div>
+<div class="subjects" id="monster">
+  <div id="monster-points" class="points"></div>
+  <div id="pokemon-pic-2" class="avatar-pic" ></div>
+</div>
   </div>
 
+
+</div>
 </body>
 </html>

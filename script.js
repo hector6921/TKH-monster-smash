@@ -16,20 +16,36 @@ function getValue(){
   return form.input.value
 }
 
+function displayPictures(){
+var pictures = ["https://assets.stickpng.com/thumbs/585960224f6ae202fedf2853.png",
+                "https://assets.stickpng.com/thumbs/585965ca4f6ae202fedf2870.png",
+                "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c32d.png",
 
+              ]
+              console.log(randomNum())
+//player
+document.getElementById("pokemon-pic-1").style.background = `url(${pictures[randomNum()]})`
+document.getElementById("pokemon-pic-1").style.backgroundSize = "contain"
+document.getElementById("pokemon-pic-1").style.backgroundRepeat = "no-repeat"
+//cpu
+document.getElementById("pokemon-pic-2").style.background = `url(${pictures[randomNum()]})`
+document.getElementById("pokemon-pic-2").style.backgroundSize = "contain"
+document.getElementById("pokemon-pic-2").style.backgroundRepeat = "no-repeat"
+}
 
 
 function displayStuff(){
 document.getElementById("player-points").innerHTML = getValue()
+displayPictures()
 }
 
 //random integer function 
 //see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-function randomNum(min, max) {
+function randomNum() {
   //return a random integer between min - max
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min) + min) // The maximum is exclusive and the minimum is inclusive
+  // min = Math.ceil(min)
+  // max = Math.floor(max)
+  return Math.floor(Math.random() * 3) // The maximum is exclusive and the minimum is inclusive
 }
 
 function playerAttack(){
